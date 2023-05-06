@@ -1,0 +1,31 @@
+<section class="vh-100" style="background-color: #3da2c3;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-lg-8 col-xl-6">
+        <div class="card rounded-3">
+          <p class="mb-2 card-header"><span class="h2 me-2">My Tasks</span><span
+                class="badge bg-danger">checklist</span></p>
+
+          <div class="card-body p-4">
+            <ul>
+              <% @tasks.each do |task| %>
+                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                  <% if task.completed? %>
+                    <i class="fa-regular fa-square-check me-2"></i>
+                  <% else %>
+                    <i class="fa-regular fa-square me-2"></i>
+                  <% end %>
+                  <%= link_to task.name, task_path(task) %></li>
+              <% end %>
+            </ul>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-secondary"><%= link_to "Add New Task", new_task_path %></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>

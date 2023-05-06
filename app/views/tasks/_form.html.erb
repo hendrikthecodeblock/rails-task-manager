@@ -1,0 +1,14 @@
+
+<%= form_with model: task do |f| %>
+  <p><%= f.label :name, class:"form-label" %></p>
+  <p><%= f.text_field :name, class:"form-control", placeholder:"name"%></p>
+  <p><%= f.label :details, class:"form-label" %></p>
+  <p><%= f.text_area :details, size: "60x5", class:"form-control", placeholder:"Description" %></p>
+  <% unless f.object.new_record? %>
+  <p><%= f.check_box :completed, class:"form-check-input" %> Completed</p>
+  <% end %>
+
+  <%= f.submit class:"btn btn-secondary" %>
+
+
+<% end %>
