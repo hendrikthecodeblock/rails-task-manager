@@ -14,19 +14,19 @@
  *= require_self
  */
 
- a {
+a {
   text-decoration: none;
   color: #fff;
- }
+}
 
- a:hover {
+a:hover {
   color: #fff;
- }
+}
 
- li a {
-  color:black;
- }
+li a {
+  color: black;
+}
 
- li a:hover {
-  color:black;
- }
+li a:hover {
+  color: black;
+}
